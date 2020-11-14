@@ -6,6 +6,7 @@
   "scripts": {
     "start": "nodemon index.js",
     "client":"npm start --prefix mern-auth-front",
+    "client:install":"npm install --prefixe mern-auth-front",
     "dev": "concurrently \"npm run start\" \"npm run client\""
   },
   "keywords": [],
