@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #2199df;
+  text-decoration: unset;
+}
+
+ul {
+  list-style: none;
+  margin-left: 1.5rem;
+}
+
+button,
+input[type="submit"] {
+  border: none;
+  outline: none;
+  background: none;
+  color: unset;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 1em 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+/* header */
+
+.header {
+  background-color: #da7c3d;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 0 1rem;
+}
+
+.header .title {
+  margin: 0;
+  padding: 0 1rem;
+  color: #fff;
+}
+.header > .auth-options {
+  display: flex;
+  height: 100%;
+}
+.header > .auth-options button {
+  padding: 0 1rem;
+  background-color: #9e650f;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.header > .auth-options button:hover {
+  background-color: #bd7e55;
+  transition: all 0.3s ease-in-out;
+}
+
+.register,
+.login,
+.home {
+  padding: 1rem;
+}
+
+.register h2,
+.login h2 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5rem;
+  align-items: center;
+}
+
+/* form */
+.form {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.form input {
+  margin-bottom: 1rem;
+}
+
+.form label {
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-left: 0.1rem;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"] {
+  font-size: 1.5rem;
+  padding: 0.3rem;
+  border: 1px solid #c2c2c2;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+}
+
+.form input[type="password"]::placeholder {
+  color: #ccc;
+  font-size: 1.2rem;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.form input:focus {
+  border: 1px solid #268ee1;
+  outline: none;
+  box-shadow: inset 0px 0px 10px rgba(#268ee4, 0.5);
+}
+
+.form input[type="submit"] {
+  border: 1px solid rgb(42, 150, 42);
+  background-color: rgb(151, 207, 151);
+  padding: 0.3rem 0.5rem;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: row;
+  color: #36473e;
+  border-radius: 4px;
+  max-width: 120px;
+  justify-content: center;
+}
+
+.form input[type="submit"]:hover {
+  background-color: #fff;
+  color: #36473e;
+  box-shadow: 0px 5px 7px -7px rgb(151, 207, 151, 1.5);
+  transition: all 0.2s ease-in-out;
+}
+
+/* error */
+.error {
+  border: 1px solid rgb(150, 55, 55);
+  background-color: rgb(245, 111, 111);
+  color: #fff;
+  padding: 0.2rem 1.2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  line-height: 1.1;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.error:hover {
+  background-color: #fff;
+  color: rgb(245, 111, 111);
+}
+
+.error > button {
+  font-size: 1.5rem;
+}
+
+.error > button:hover {
+  color: rgb(150, 55, 55);
+}
+/* media queries for form */
+@media screen and (max-width: 550px) {
+  .header .title {
+    font-size: 1.2rem;
+  }
+
+  .header > .auth-options button {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
+
+  .form input[type="submit"] {
+    min-width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+}
