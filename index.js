@@ -30,6 +30,8 @@ mongoose.connect(
 );
 
 //router
-const router = require("./routes/userRouter");
+const userRouter = require("./routes/userRouter");
+const todoRouter = require("./routes/todoRouter");
 
-app.use("/users", router);
+app.use("/users", userRouter);
+app.use("/todo", todoRouter);
