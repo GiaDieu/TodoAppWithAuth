@@ -15,18 +15,18 @@ const Login = () => {
   const submit = async (e) => {
     e.preventDefault();
     try {
-      const existedUser = { email, password };
+      const loginUser = { email, password };
 
-      const loginUser = await Axios.post(
+      const loggedinUser = await Axios.post(
         "http://localhost:5000/users/login",
-        existedUser,
+        loginUser,
       );
       setUserData({
-        token: loginUser.data.token,
-        user: loginUser.data.user,
+        token: loggedinUser.data.token,
+        user: loggedinUser.data.user,
       });
 
-      localStorage.setItem("auth-token", loginUser.data.token);
+      localStorage.setItem("auth-token", loggedinUser.data.token);
       history.push("/");
     } catch (err) {
       err.response.data.message && setError(err.response.data.message);
