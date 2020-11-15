@@ -1,17 +1,21 @@
-import React, { useEffect, useContext } from "react";
-import UserContext from "../../context/UserContext";
+import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import TodoList from "../Todo/TodoList";
 
 const Home = () => {
-  const { userData } = useContext(UserContext);
-
+  const token = localStorage.getItem("auth-token");
   const history = useHistory();
 
   useEffect(() => {
-    if (!userData.user) history.push("/login");
+    // if (!userData.user && !userData.token) history.push("/login");
+    if (!token) history.push("/login");
   });
 
-  return <div>Home</div>;
+  return (
+    <div className="home">
+      <TodoList />
+    </div>
+  );
 };
 
 export default Home;
