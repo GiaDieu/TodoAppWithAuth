@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className="header">
       <Link to="/">
-        <h1>Auth</h1>
+        <h1>Todo Application</h1>
       </Link>
       <AuthOptions />
     </header>
