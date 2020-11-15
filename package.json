@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
-    "client":"npm start --prefix mern-auth-front",
-    "client:install":"npm install --prefixe mern-auth-front",
+    "client": "npm start --prefix mern-auth-front",
+    "client:install": "npm install --prefixe mern-auth-front",
     "dev": "concurrently \"npm run start\" \"npm run client\""
   },
   "keywords": [],
@@ -21,6 +21,7 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.14",
-    "nodemon": "^2.0.6"
+    "nodemon": "^2.0.6",
+    "react-icons": "^3.11.0"
   }
 }
